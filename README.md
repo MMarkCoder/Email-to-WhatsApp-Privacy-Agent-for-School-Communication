@@ -55,7 +55,7 @@ Once the school's information already lives in a structured, anonymized knowledg
 ### High-level architecture
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffffff', 'primaryBorderColor': '#000000', 'primaryTextColor': '#000000', 'lineColor': '#000000', 'secondaryColor': '#ffffff', 'tertiaryColor': '#ffffff', 'mainBkg': '#ffffff', 'clusterBkg': '#ffffff', 'clusterBorder': '#000000', 'edgeLabelBackground': '#ffffff', 'textColor': '#000000' }}}%%
+
 flowchart TD
     Email["School Email Inbox"] --> Ingest["Email Ingestion"]
     Ingest --> PII["PII Detection & Anonymization<br/>(names, addresses, contacts, IDs)"]
@@ -75,7 +75,7 @@ flowchart TD
 ### Anonymization step in detail
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffffff', 'primaryBorderColor': '#000000', 'primaryTextColor': '#000000', 'lineColor': '#000000', 'secondaryColor': '#ffffff', 'tertiaryColor': '#ffffff', 'mainBkg': '#ffffff', 'clusterBkg': '#ffffff', 'clusterBorder': '#000000', 'edgeLabelBackground': '#ffffff', 'textColor': '#000000' }}}%%
+
 flowchart LR
     Raw["Raw Email Text"] --> NER["Named-Entity Recognition<br/>(people, places, organizations)"]
     Raw --> Regex["Pattern Matching<br/>(phone, email, address, IBAN, IDs)"]
@@ -90,7 +90,7 @@ flowchart LR
 ### Question-answering flow in the group
 
 ```mermaid
-%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffffff', 'primaryBorderColor': '#000000', 'primaryTextColor': '#000000', 'lineColor': '#000000', 'secondaryColor': '#ffffff', 'tertiaryColor': '#ffffff', 'mainBkg': '#ffffff', 'clusterBkg': '#ffffff', 'clusterBorder': '#000000', 'edgeLabelBackground': '#ffffff', 'textColor': '#000000' }}}%%
+
 sequenceDiagram
     participant Parent
     participant Bot as Agent
